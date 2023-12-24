@@ -1,11 +1,15 @@
 # 파이어베이스 프로젝트 만들기
 
+---
+
 Firebase 홈페이지에 들어간 뒤 <span style="color:orange">**프로젝트 만들기**</span> 버튼을 누른다.
 ![파이어베이스 홈페이지](https://github.com/psg9790/BlogImages/blob/main/231224-%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%EC%8A%B5-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A7%8C%EB%93%A4%EA%B8%B0.png?raw=true)  
 나는 프로젝트 이름을 "FirebaseStart"로 하고, 애널리틱스 사용하기, Default Account for Firebase를 선택하고 생성했다.  
 프로젝트 생성이 완료되면 앱을 만들 수 있는데, 바로 하지 말고 유니티에서 선행작업을 먼저 해주자.
 
 ## 유니티 bundle id 설정
+
+---
 
 유니티 프로젝트를 열고 Edit->Project Settings의 Player 탭에 들어가면 아래와 같이 Company Name과 Product Name을 수정할 수 있다.  
 ![](https://github.com/psg9790/BlogImages/blob/main/231224-%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%EC%8A%B5-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/%EC%9C%A0%EB%8B%88%ED%8B%B0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%84%A4%EC%A0%95.png?raw=true)  
@@ -16,6 +20,8 @@ Firebase 홈페이지에 들어간 뒤 <span style="color:orange">**프로젝트
 ![](https://github.com/psg9790/BlogImages/blob/main/231224-%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%EC%8A%B5-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/%EC%9C%A0%EB%8B%88%ED%8B%B0%EC%95%B1id%EB%B3%B5%EC%82%AC.png?raw=true)
 
 ## 파이어베이스 유니티용 앱 생성
+
+---
 
 위에서 파이어베이스 프로젝트를 생성하고 나면 아래와 같은 화면을 볼 수 있을 것이다.
 ![](https://github.com/psg9790/BlogImages/blob/main/231224-%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%EC%8A%B5-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%83%9D%EC%84%B1%EC%99%84%EB%A3%8C.png?raw=true)
@@ -40,10 +46,12 @@ Firebase 홈페이지에 들어간 뒤 <span style="color:orange">**프로젝트
 
 ## IOS 에러
 
+---
+
 만약 유니티 IOS sdk를 설치하지 않았으면 FirebaseAuth를 설치하고 난 뒤 유니티 콘솔창에 에러가 뜰 텐데, 이건 Firebase sdk에서 IOS용 코드에 접근하려고 하기 때문에 뜨는 오류이다.  
 무시해도 실행은 되지만 에러메세지 보기 싫으니 지우자.  
 console에서 오류메세지를 클릭하면 문제 파일이 프로젝트에 하이라이트 되는데, 그걸 클릭.  
-각각 inspector창에서 Define Constraints 옵션에다가 +버튼을 누른 뒤 "<u>UNITY_IOS</u>"를 넣어주면 된다.  
+각각 inspector창에서 Define Constraints 옵션에다가 +버튼을 누른 뒤 "_UNITY_IOS_"를 넣어주면 된다.  
 입력 후 아래 apply 버튼을 누르면 유니티가 다시 컴파일을 해야하니, 오른쪽 아래의 progress bar가 사라질때까지 기다려주자.
 ![](https://github.com/psg9790/BlogImages/blob/main/231224-%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%EC%8A%B5-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/solve_error.png?raw=true)
 
