@@ -33,10 +33,18 @@ Firebase 홈페이지에 들어간 뒤 <span style="color:orange">**프로젝트
 용량이 1GB쯤 되니 시간이 좀 걸린다.  
 다운받고 압축을 풀면 폴더가 하나 나오는데, 이 안에 기능별로 .unitypackage 파일들이 들어있다.  
 새로운 기능이 필요할 때마다 이 패키지 파일을 실행해서 라이브러리를 설치하면 된다.  
-![]()
+![](https://github.com/psg9790/BlogImages/blob/main/231224-%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%EC%8A%B5-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/packagesinproject.png?raw=true)  
+나는 로그인 기능인 **FirebaseAuth**를 설치해보았다.
 
 ## IOS 에러
 
-만약에 유니티 에디터 설치할 때 IOS sdk를 설치하지 않았으면 유니티 콘솔창에 에러가 뜰 텐데, 이건 Firebase sdk에서 기본적으로 IOS 라이브러리에 접근하려고 하기 때문에 뜨는 오류이다. 무시해도 실행은 되지만 에러메세지 보기 싫으니 지우자.
+만약 유니티 IOS sdk를 설치하지 않았으면 유니티 콘솔창에 에러가 뜰 텐데, 이건 Firebase sdk에서 IOS용 코드에 접근하려고 하기 때문에 뜨는 오류이다.  
+무시해도 실행은 되지만 에러메세지 보기 싫으니 지우자.  
+console에서 오류메세지를 클릭하면 문제 파일이 프로젝트에 하이라이트 되는데, 그걸 클릭.  
+각각 inspector창에서 Define Constraints 옵션에다가 +버튼을 누른 뒤 "UNITY_IOS"를 넣어주면 된다. 입력후 아래의 apply 버튼을 누르면 유니티가 다시 컴파일을 해야하니, 오른쪽 아래의 progress bar가 사라질때까지 기다려주자.
 
-오류 메세지를 클릭하면 문제가 있는 에셋파일이 뜨는데, 각각 인스펙터에서 Define Constraints 옵션에다가 +버튼을 누른 뒤 UNITY_IOS 문자열을 넣어주면 된다. 입력하면 유니티가 컴파일을 다시 해야하니, 오른쪽 아래의 progress bar가 사라질때까지 기다리자.
+만약 오류 메세지를 눌렀을 때 하이라이팅이 안되면
+
+-   ExternalDependencyManager->Editor->{1.2.177(version)}->Google.IOSResolver
+-   Firebase->Editor->Firebase.Editor
+    이 두개가 아마 오류 출처일 것이다. 이거 두개 수정하자.
